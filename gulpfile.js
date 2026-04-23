@@ -14,6 +14,6 @@ export function css(done) {
     done()
 }
 
-export function dev() { // una vez que mando a llamar la funcion de dev, va a estar observando el archivo puesto entre watch()
-    watch('src/scss/app.scss', css)
+export function dev() { // generando el wacth con gulp
+    watch('src/scss/**/*.scss', css)
 }
