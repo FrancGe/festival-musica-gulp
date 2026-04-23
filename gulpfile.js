@@ -1,5 +1,5 @@
 // Importando y uniendo Gulp y SASS
-import { src, dest, watch } from 'gulp'
+import { src, dest, watch, series } from 'gulp'
 import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 
@@ -8,7 +8,7 @@ const sass = gulpSass(dartSass);
 // Generando la carpeta build con el css
 export function css(done) { 
     src('src/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass().on('error', sass.logError) )
         .pipe( dest('build/css') )
 
     done()
@@ -17,3 +17,5 @@ export function css(done) {
 export function dev() { // generando el wacth con gulp
     watch('src/scss/**/*.scss', css)
 }
+
+export default series(css, dev);

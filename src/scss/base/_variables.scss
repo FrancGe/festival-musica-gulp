@@ -1,10 +1,17 @@
 $fuentePrincipal: "Montserrat", sans-serif;
 
 // Colores:
-$beige: #DEE0AE;
-$naranja: #C33832;
-$morado: #70194C;
-$azul: #4C46D2;
-$azulOscuro: #0E4381;
+$oscuro: #0A2707;
+$verde: #5AE14C;
+$verdeClaro: #8AEA80;
+$fuxia: #B340BF;
+$rosado: #C56ECE;
+$azul: #0E4381;
 $blanco: white;
 $negro: black;
+
+// Mediaquerys:
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+$desktopL: 1400px;
