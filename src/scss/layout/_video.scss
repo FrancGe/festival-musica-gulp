@@ -11,8 +11,8 @@
         position: absolute;
         background: linear-gradient(
             270deg,
-            rgba(v.$rosado, 50%),
-            rgba(color.adjust(v.$oscuro, $lightness: -20%), 80%) /* Solucion a usar darken, SASS ya no permite usarlo */
+            rgba(v.$oscuro, 30%),
+            rgba(color.adjust(v.$rosado, $lightness: -50%), 90%) /* Solucion a usar darken, SASS ya no permite usarlo */
         );
        inset: 0;
        display: flex;
