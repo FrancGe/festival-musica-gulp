@@ -27,3 +27,52 @@
     }
 
 }
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(#0000, 0.5);
+    display: grid;
+    place-items: center;
+    animation: fadeIn ease 0.3s;
+    &.fade-out {
+         animation: fadeOut ease 0.3s;
+    }
+
+    img {
+        max-width: 100rem;
+    }
+}
+
+.btn-cerrar {
+    background-color: v.$oscuro;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    color: v.$blanco;
+    border-style: none;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

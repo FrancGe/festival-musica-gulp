@@ -324,6 +324,9 @@ body {
   color: black;
   font-size: 2rem;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
 
 p {
   color: black;
@@ -669,4 +672,49 @@ body > section {
 .galeria-imagenes img {
   height: 20rem;
   object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  animation: fadeIn ease 0.3s;
+}
+.modal.fade-out {
+  animation: fadeOut ease 0.3s;
+}
+.modal img {
+  max-width: 100rem;
+}
+
+.btn-cerrar {
+  background-color: #0A2707;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  border-style: none;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
