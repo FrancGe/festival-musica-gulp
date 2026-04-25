@@ -538,3 +538,92 @@ body > section {
 .bg-claro li:nth-child(odd) {
   background-color: rgb(206.1484536082, 132.8711340206, 213.7288659794);
 }
+
+.contenedor-boletos {
+  background-color: #5AE14C;
+}
+.contenedor-boletos h3 {
+  color: white;
+}
+.contenedor-boletos .boletos {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contenedor-boletos .boletos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.pase {
+  transition: transform 0.2s ease;
+}
+.pase:hover {
+  transform: scale(1.05);
+}
+.pase-nombre {
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+.pase-header, .pase-footer {
+  padding: 1rem;
+}
+.pase-header p, .pase-footer p {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.pase-header {
+  background-color: #0A2707;
+}
+.pase-header p {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.pase-body {
+  background-color: white;
+}
+.pase-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pase-body ul li {
+  padding: 2rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pase-footer {
+  background-color: white;
+  padding: 2rem;
+}
+.pase-footer p {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #B340BF;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.pase-footer p:hover {
+  background-color: rgb(107.4, 38.4, 114.6);
+  transform: scale(1.04);
+}
+
+.footer {
+  text-align: center;
+  background-color: #0A2707;
+  margin: 0;
+  padding: 1rem;
+}
+.footer p {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 500;
+}

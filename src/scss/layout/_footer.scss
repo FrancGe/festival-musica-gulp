@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+
+.footer {
+    text-align: center;
+    background-color: v.$oscuro;
+    margin: 0;
+    padding: 1rem;
+    p {
+        color: v.$blanco;
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+}
+
