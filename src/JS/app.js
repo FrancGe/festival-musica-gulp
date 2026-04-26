@@ -25,6 +25,9 @@ function crearGaleria() {
 
     for(let i = 1; i <= cantidad_imagenes; i++) {
         const imagen = document.createElement('IMG')
+        imagen.loading = 'lazy';
+        imagen.width = '300';
+        imagen.height = '200';
         imagen.src = `src/img/gallery/full/${i}.jpg`;
         imagen.alt = 'Imagen galeria';
 
@@ -81,7 +84,7 @@ function cerrarModal() {
 function resaltarEnlace() {
     document.addEventListener('scroll', function() {
         const section = document.querySelectorAll('section')
-        const enlacesNavegacion = document.querySelectorAll('.navegacion-principal a')
+        const navLinks = document.querySelectorAll('.navegacion-principal a')
 
         let actual = '';
         section.forEach(section => {
@@ -92,7 +95,7 @@ function resaltarEnlace() {
             }
         })
 
-        enlacesNavegacion.forEach(link => {
+        navLinks.forEach(link => {
             link.classList.remove('active')
             if(link.getAttribute('href') == '#' + actual) {
                 link.classList.add('active')
@@ -102,15 +105,15 @@ function resaltarEnlace() {
 }
 
 function scrollNav() {
-    const enlacesNavegacion = document.querySelectorAll('.navegacion-principal a')
+    const navLinks = document.querySelectorAll('.navegacion-principal a')
 
-    enlacesNavegacion.forEach(link => {
+    navLinks.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault()
-            const sectionScroll = e.target.getAttribute('href')
-            const section = document.querySelector(sectionScroll)
+            const sectionScroll = e.target.getAttribute('href');
+            const section = document.querySelector(sectionScroll);
 
-            section.scrollIntoView( {behavior: 'smooth'} )
+            section.scrollIntoView({behavior: 'smooth', block: 'nearest'})
         })
     })
 }
