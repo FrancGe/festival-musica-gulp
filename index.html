@@ -41,7 +41,11 @@
 
     <section class="sobre-festival">
         <div class="imagen">
-            <img width:"300" height:"200" loading="lazy" src="./src/img/dj.webp" alt="imagen DJ">
+            <picture>
+            <source srcset="build/img/dj.avif" type="image/avif"/>
+            <source srcset="build/img/dj.webp" type="image/webp"/>
+            <img width:"300" height:"200" loading="lazy" src="./build/img/dj.webp" alt="imagen DJ">
+            </picture>
         </div>
 
         <div class="contenido-festival">
