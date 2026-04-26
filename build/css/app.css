@@ -375,6 +375,15 @@ body > section {
 .header {
   background-color: #5AE14C;
 }
+@media (min-width: 768px) {
+  .header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
+}
 .header .contenido-header {
   padding: 2rem;
 }
@@ -411,8 +420,8 @@ body > section {
   color: white;
   font-weight: 500;
 }
-.navegacion-principal a:hover {
-  color: #B340BF;
+.navegacion-principal a:hover, .navegacion-principal a.active {
+  color: #0A2707;
 }
 
 /* Evitar problemas con los colores en SASS*/
